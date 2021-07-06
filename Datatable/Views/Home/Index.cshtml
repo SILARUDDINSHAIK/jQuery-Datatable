@@ -1,8 +1,223 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
+<table class="table table-condensed" id="myTable">
+<thead>
+    <tr>
+            <th>Employee Name</th>
+            <th>Employee address</th>
+            <th>Salary</th>
+            <th>Status</th>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+            
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+       <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Howard Hofstader</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Howard</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Jimmy</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>Micheal</td>
+            <td>Klemzig</td>
+            <td>100000</td>
+            <td>True</td>
+        </tr> 
+    </tbody>
+    </table>
+    @section Scripts
+    {
+        <script type="text/javascript">
+        $(document).ready( function () 
+        {
+        $('#myTable').DataTable();
+        scrollY: 400
+        } );
+
+    // Edit record
+    $('#myTable').on('click', 'td.editor-edit', function (e) {
+        e.preventDefault();
+ 
+        editor.edit( $(this).closest('tr'), {
+            title: 'Edit record',
+            buttons: 'Update'
+        } );
+    } );
+ 
+    // Delete a record
+    $('#myTable').on('click', 'td.editor-delete', function (e) {
+        e.preventDefault();
+ 
+        editor.remove( $(this).closest('tr'), {
+            title: 'Delete record',
+            message: 'Are you sure you wish to remove this record?',
+            buttons: 'Delete'
+        } );
+    } );
+        </script>
+    }
+
